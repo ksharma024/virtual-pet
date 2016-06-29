@@ -9,6 +9,7 @@ namespace VirtualPet
     class Program
     {
         static void Main(string[] args)
+        { 
         VirtualPet pet = new VirtualPet();
             while (1 == 1)
             {
@@ -44,3 +45,21 @@ namespace VirtualPet
                 else if (input == "4")
                 {
                     Console.WriteLine("Goodbye");
+                 System.Threading.Thread.Sleep(300);
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid entry");
+                }
+                if (!string.IsNullOrEmpty(result))
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine(result);
+                }
+                Console.WriteLine("");
+                pet.Tick();
+            }
+        }
+    }
+}
