@@ -17,3 +17,30 @@ namespace VirtualPet
                 Console.WriteLine("Playfulness: " + pet.Playfulness);
                 Console.WriteLine("Energy: " + pet.Energy);
                 Console.WriteLine("");
+
+                Console.WriteLine("What do you want to do?");
+                Console.WriteLine("1. Feed the pet");
+                Console.WriteLine("2. Walk the pet");
+                Console.WriteLine("3. Play with the pet");
+                Console.WriteLine("4. Exit");
+                Console.WriteLine("");
+
+                string input = Console.ReadLine();
+
+                    string result = "";
+
+                if (input == "1")
+                {
+                    result = pet.FeedPet();
+                }
+                else if (input == "2")
+                {
+                    result = pet.TakeForWalk();
+                }
+                else if (input == "3")
+                {
+                    result = pet.Play();
+                }
+                else if (input == "4")
+                {
+                    Console.WriteLine("Goodbye");
